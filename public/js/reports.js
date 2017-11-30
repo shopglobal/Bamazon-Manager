@@ -25,6 +25,16 @@ function getData(){
 
       let salesnums = data[i].dec18_sales;
       var number = parseFloat(salesnums);
+      var min = parseFloat(salesnums);
+      var max = parseFloat(salesnums);
+      var value = number;
+      if(value < min)
+          value = min;
+      if(value > max)
+          value = max;
+      value = number;
+      let productsLoop = data[i].product_name;
+      console.log(productsLoop+": "+"$"+value);
 
       if (data[i].department_name.toLowerCase() === "kitchen") {
         kitchenCI += data[i].quantity_on_hand;
@@ -116,11 +126,11 @@ function getData(){
   //SECONDCHART
     var ctx = $("#myChart2");
     var myChart = new Chart(ctx, {
-      type: 'pie',
+      type: 'bar',
       data: {
         labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
         datasets: [{
-          label: '',
+          label: '$',
           data: [kitchenOCTS, electronicsOCTS, clothingOCTS, furnitureOCTS, petsOCTS, outdoorOCTS, autoOCTS, fitnessOCTS, cellphonesOCTS, complapOCTS, compaccOCTS],
           backgroundColor: [
             'rgba(0, 255, 255, 0.5)',
@@ -161,7 +171,7 @@ function getData(){
         }
       }
     });
-    
+
   //THIRD CHART
     var ctx = document.getElementById("myChart3");
     var myChart3 = new Chart(ctx, {

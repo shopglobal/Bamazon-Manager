@@ -2,7 +2,7 @@
 var express = require("express");
 var app = express();
 var port = process.env.PORT || 3000;
-
+var Globalize = require( "globalize" );
 // -- STATIC ROUTES -- //
 app.use(express.static("public"));
 
