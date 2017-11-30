@@ -7,7 +7,7 @@ if (process.env.JAWSDB_URL) {
     host: "198.199.101.74",
     user: "markallenx",
     password: "marktiffany8273$$$",
-    database: "nstock"
+    database: "xbamazon_dbx"
   });
 }
 
