@@ -1,0 +1,52 @@
+{{!-- BANNER --}}
+  <div class="text-center jumbotron" id="view-all-banner">
+    Product Inventory
+  </div>
+{{!-- PAGE CONTAINER --}}
+  <div class="container panel panel-default" id="view-all-container">
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-xs-12" id="addNew">
+          <button class="btn btn-xs btn-success"><span class="glyphicon glyphicon-plus"></span></button>
+          <strong>&nbsp; New item</strong>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="table-responsive text-left">        
+          <table class="table table-condensed table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Price</th>
+                <th>Units</th>
+                <th class="text-center">Options</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each products}}
+                <tr>
+                  <td class="col-sm-3">{{this.product_name}}</td>
+                  <td class="col-sm-3">{{this.department_name}}</td>
+                  <td class="col-sm-2">${{this.price}}</td>
+                  <td class="col-sm-1">{{this.quantity_on_hand}}</td>
+                  <td class="col-sm-2 text-center">
+                    <button class='btn btn-xs btn-primary' data-index="{{this.item_id}}" alt='Edit'>
+                      <span class='glyphicon glyphicon-pencil'></span>
+                    </button>
+                    <button class='btn btn-xs btn-danger' data-index="{{this.item_id}}" alt='Delete'>
+                      <span class='glyphicon glyphicon-trash'></span>
+                    </button>
+                  </td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="/js/viewall.js"></script>

@@ -1,0 +1,86 @@
+{{!-- BANNER --}}
+	<div class="text-center jumbotron" id="reports-banner">
+		Inventory and Sales Reports
+	</div>
+{{!-- PAGE CONTAINER --}}
+	<div class="container" id="reports-container">
+		<div class="row text-center">
+			<div class = "col-xs-12">
+				{{!-- CHART 1 --}}
+					<div class="panel panel-default">
+						<h4>Current Inventory on Hand</h4>
+						<div class="chart-container panel-body">
+							<div class="col-xs-12 col-md-10">
+								<canvas id="myChart"></canvas>
+							</div>
+							<div class="col-xs-12 col-md-2 chart-keys text-left">
+								<h6 class="text-center"><strong>KEY</strong></h6>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>1)</strong> Kitchen</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>2)</strong> Electronics</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>3)</strong> Clothing</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>4)</strong> Furniture</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>5)</strong> Pets</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>6)</strong> Outdoor</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>7)</strong> Auto</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>8)</strong> Fitness</span>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="col-xs-12">
+				{{!-- CHART 2 --}}
+					<div class="panel panel-default">
+						<h4>Dept Sales Figures Oct 2017</h4>
+						<div class="chart-container panel-body">
+							<div class="col-xs-12 col-md-10">
+								<canvas id="myChart2"></canvas>
+							</div>
+							<div class="col-xs-12 col-md-2 chart-keys text-left">
+								<h6 class="text-center"><strong>KEY</strong></h6>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>1)</strong> Kitchen</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>2)</strong> Electronics</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>3)</strong> Clothing</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>4)</strong> Furniture</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>5)</strong> Pets</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>6)</strong> Outdoor</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>7)</strong> Auto</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>8)</strong> Fitness</span>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="col-xs-12">
+				{{!-- CHART 3 --}}
+					<div class="panel panel-default">
+						<h4>Last 12 Months Total Sales</h4>
+						<div class="chart-container panel-body">
+							<div class="col-xs-12 col-md-10">
+								<canvas id="myChart3"></canvas>
+							</div>
+							<div class="col-xs-12 col-md-2 chart-keys text-left">
+								<h6 class="text-center"><strong>KEY</strong></h6>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>11)</strong> Nov'16</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>12)</strong> Dec'16</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>1)</strong> Jan'17</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>2)</strong> Feb'17</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>3)</strong> Mar'17</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>4)</strong> Apr'17</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>5)</strong> May'17</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>6)</strong> Jun'17</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>7)</strong> Jul'17</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>8)</strong> Aug'17</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>9)</strong> Sep'17</span>
+								<span class="col-xs-6 col-sm-4 col-md-12"><strong>10)</strong> Oct'17</span>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+	<br>
+{{!-- JQUERY --}}
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+{{!-- CHART.JS --}}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+{{!-- CHART DATA --}}
+	<script src="/js/reports.js"></script>
